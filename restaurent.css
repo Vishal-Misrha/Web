@@ -1,0 +1,159 @@
+:root {
+            --primary: #ff6f00;
+            --dark: #1a1a1a;
+            --light: #f9f9f9;
+            --text: #333;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: var(--text);
+            background: white;
+            margin: 0;
+            line-height: 1.6;
+        }
+        h1, h2 { font-family: 'Playfair Display', serif; }
+        a { text-decoration: none; color: inherit; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+        /* Hero */
+        .hero {
+            position: relative;
+            height: 90vh;
+            min-height: 600px;
+            background-image: url("https://www.venetianlasvegas.com/adobe/dynamicmedia/deliver/dm-aid--08bd4846-22b9-4c34-bef8-c5944eb8e4b0/dining-room-1-1920x1080.jpg?quality=64&preferwebp=true&referrer=grok.com");
+            background-size: cover;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.5));
+        }
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+        }
+        .hero h1 { font-size: 3.5rem; margin: 0 0 20px; }
+        .hero p { font-size: 1.5rem; margin: 0 0 30px; }
+        .btn {
+            background: var(--primary);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-weight: 500;
+            display: inline-block;
+            transition: background 0.3s;
+        }
+        .btn:hover { background: #e65100; }
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid white;
+            margin-left: 20px;
+        }
+
+        /* Section */
+        section { padding: 80px 0; text-align: center; }
+        h2 { font-size: 2.8rem; margin-bottom: 40px; }
+
+        /* Carousel */
+        .carousel {
+            display: flex;
+            overflow-x: auto;
+            gap: 30px;
+            padding: 20px 0;
+            scrollbar-width: thin;
+        }
+        .carousel::-webkit-scrollbar { height: 8px; }
+        .carousel::-webkit-scrollbar-thumb { background: #ccc; border-radius: 4px; }
+        .card {
+            flex: 0 0 380px;
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .card img { width: 100%; height: 500px; object-fit: cover; }
+        .card-overlay {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background: rgba(255,255,255,0.9);
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        /* Features */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+        .feature {
+            background: var(--light);
+            padding: 40px;
+            border-radius: 8px;
+        }
+        .feature i {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        .feature h3 { font-size: 1.8rem; margin-bottom: 15px; }
+
+        /* Examples */
+        .examples {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        .example {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .example img { width: 100%; height: 400px; object-fit: cover; }
+        .example-overlay {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: white;
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        .faq details {
+            text-align: left;
+            max-width: 800px;
+            margin: 0 auto 20px;
+            background: var(--light);
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .faq summary {
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 1.2rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 60px 0 20px;
+            text-align: center;
+        }
+        .footer-links a { margin: 0 15px; color: #ccc; }
+        .social a { font-size: 1.5rem; margin: 0 15px; }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .btn-secondary { display: block; margin: 20px auto 0; }
+        }
